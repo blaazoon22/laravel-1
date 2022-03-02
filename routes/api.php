@@ -14,6 +14,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+/*
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+*/
+
+
+//Products
+Route::get('/products/{section}', 'App\Http\Controllers\ProductsController@sectionProducts');
+
+Route::get('/products', 'App\Http\Controllers\ProductsController@allProducts');
